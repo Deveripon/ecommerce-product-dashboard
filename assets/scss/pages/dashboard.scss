@@ -1,0 +1,136 @@
+.main-dashboard-page {
+	height: 100vh;
+}
+.main-navigation {
+	height: 100vh;
+	ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			border-radius: 0px 0px 0px 0px !important;
+			border-top: 0;
+			border-bottom: 0;
+			border-right: 0;
+			margin-bottom: 30px;
+			border-left: 5px solid transparent;
+			transition: all 0.3s ease-in-out;
+			a {
+				i {
+					font-size: 25px;
+					color: #a9a9a9;
+					transition: all 0.3s ease-in-out;
+					&:hover {
+						color: $main-color;
+					}
+				}
+			}
+		}
+	}
+}
+li.active {
+	background: none !important;
+	border-left: 5px solid $main-color;
+}
+.active {
+	i {
+		color: $main-color !important;
+	}
+}
+.sub-navigation {
+	border-right: 1px solid #ccc !important;
+	height: 100vh;
+	max-width: 300px;
+	padding-top: 50px;
+	margin-left: 20px;
+}
+.profile-card {
+	.image {
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		img {
+			width: 100%;
+			border-radius: 50%;
+		}
+	}
+}
+.profile-info {
+	margin-left: 20px;
+	margin-right: 10px;
+	h4 {
+		color: $heading-color;
+		font-family: poppins;
+		font-size: 20px;
+		font-weight: 500;
+	}
+	span {
+		color: #a9a9a9;
+	}
+}
+.dropdown {
+	cursor: pointer;
+}
+.nav-title {
+	font-size: 23px;
+	font-family: poppins;
+	font-weight: 500;
+	color: $heading-color;
+	margin-bottom: 10px;
+	margin-top: 50px;
+}
+.dashboard-nav {
+	ul {
+		li {
+			margin: 5px 0px;
+			border: none;
+			i {
+				color: #a9a9a9;
+				font-size: 12px;
+			}
+			a {
+				font-size: 14px;
+				font-family: poppins;
+				font-weight: 200;
+				color: #a9a9a9;
+				transition: 0.2s ease-in-out;
+				&:hover {
+					color: $heading-color;
+				}
+			}
+			.submenu {
+				height: 0px;
+				overflow: hidden;
+				transition: 0.2s ease-in-out;
+				.submenu-item {
+					margin: 10px;
+					padding: 0px 0px 0px 20px;
+					transition: 0.2s ease-in-out;
+					a {
+						font-weight: 500;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		.link-item.active > a {
+			color: $heading-color !important;
+		}
+	}
+	.submenu-item.active a {
+		color: $heading-color !important;
+	}
+	.link-item:hover .submenu {
+		height: auto !important;
+		transition: all 0.3s ease-in-out;
+	}
+	.link-item.active > .submenu {
+		height: auto !important;
+		transition: all 0.3s ease-in-out;
+	}
+}
